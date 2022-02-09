@@ -81,9 +81,9 @@ const resetGame = () => {
 					<input
 						type='number'
 						id='amount'
-						min='5'
+						min='1'
 						max='50'
-						step='5'
+						step='1'
 						defaultValue={defaultNumOfQuestions}
 						onChange={handleChange}
 						disabled={loadingCategories || quizInProgress}

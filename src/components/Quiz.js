@@ -22,7 +22,7 @@ function Quiz() {
 	const [error, setError] = useState(false)
 	const [loadingCategories, setLoadingCategories] = useState(false)
 	const [loadingQuestions, setLoadingQuestions] = useState(false)
-	const [apiOptions, setApiOptions] = useState({ amount: '5' })
+	const [apiOptions, setApiOptions] = useState({ amount: '1' })
 	const [withTimer, setWithTimer] = useState(false)
 	const [timer, setTimer] = useState(0)
 	const [categories, setCategories] = useState([])

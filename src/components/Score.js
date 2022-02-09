@@ -7,7 +7,10 @@ function Score({ score, timer, withTimer,totalQuestions,gameEnded }) {
 
     const options = {
   chart: {
-    type: "pie"
+    type: "pie",
+    height: "300px",
+    backgroundColor: "transparent",
+
   },
   series: [
     {
@@ -40,7 +43,8 @@ function Score({ score, timer, withTimer,totalQuestions,gameEnded }) {
 				<div className='score-timer-text'>Score</div>
 				<div className='score-timer-number'>{score}/{totalQuestions}00</div>
 			</div>
-            {gameEnded? <PieChart highcharts={Highcharts} options={options} />:''}
+               {gameEnded? <PieChart highcharts={Highcharts} options={options} />:''}
+            
            
 		</div>
 	)
