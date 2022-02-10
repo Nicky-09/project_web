@@ -4,6 +4,10 @@ import PieChart from "highcharts-react-official";
 
 function Score({ score, timer, withTimer,totalQuestions,gameEnded }) {
 
+    const resetGame = () => {
+        window.location.reload();
+    }
+
 
     const options = {
   chart: {
@@ -12,6 +16,9 @@ function Score({ score, timer, withTimer,totalQuestions,gameEnded }) {
     backgroundColor: "transparent",
 
   },
+  title: {
+    text: 'Score Distribution',
+},
   series: [
     {
       data: [
@@ -30,7 +37,7 @@ function Score({ score, timer, withTimer,totalQuestions,gameEnded }) {
   ]
 };
 
-    console.log(totalQuestions)
+    // console.log(totalQuestions)
 	return (
 		<div className='score-timer-container'>
 			{withTimer && (
@@ -44,6 +51,14 @@ function Score({ score, timer, withTimer,totalQuestions,gameEnded }) {
 				<div className='score-timer-number'>{score}/{totalQuestions}00</div>
 			</div>
                {gameEnded? <PieChart highcharts={Highcharts} options={options} />:''}
+
+               <button
+						className='btn'
+						onClick={resetGame}
+						
+					>
+						Reset Game
+					</button>
             
            
 		</div>

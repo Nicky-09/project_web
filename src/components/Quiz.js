@@ -3,9 +3,8 @@ import axios from 'axios'
 // import Progress from './components/Progress'
 import Score from './Score'
 import Question from './Questions'
-// import Leaderboard from './components/Leaderboard'
-// import SaveScore from './components/SaveScore'
 import Header from './Header'
+// import SaveScore from './SaveScore'
 
 const decodeString = string => {
 	const text = document.createElement('textarea')
@@ -36,7 +35,7 @@ function Quiz() {
 	const [quizInProgress, setQuizInProgress] = useState(false)
 	const [gameEnded, setGameEnded] = useState(false)
 
-  console.log(gameEnded)
+//   console.log(gameEnded)
 
 	const resetGame = () => {
 		setTimer(0)
@@ -186,7 +185,8 @@ function Quiz() {
 
 	return (
 		<Fragment>
-			<Header
+            {!quizInProgress ? 
+			<Header 
 				categories={categories}
 				handleChange={handleChange}
 				handleSubmit={handleSubmit}
@@ -195,7 +195,7 @@ function Quiz() {
 				loadingQuestions={loadingQuestions}
 				quizInProgress={quizInProgress}
 				defaultNumOfQuestions={apiOptions.amount}
-			/>
+			/>  : null}
 
 			<div className='container'>
 				{error && <div className='error-message'>{error}</div>}
