@@ -79,7 +79,7 @@ function Quiz() {
 				url: 'https://opentdb.com/api.php',
 				params: { ...apiOptions },
 			})
-
+console.log(data);
 			if (!data.results.length) {
 				setError(
 					'🙁 No questions found with the selected options. please try again!'

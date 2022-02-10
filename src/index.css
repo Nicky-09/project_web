@@ -21,8 +21,8 @@ body {
 header {
 	position: sticky;
 	top: 0;
-	/* background-color: white;
-	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); */
+	/* background-color: white; */
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
 	padding: 0 1rem 0.4rem;
 }
 
@@ -35,6 +35,12 @@ header {
 	flex-wrap: wrap;
   padding:20px 0;
 } */
+
+.form-container{
+  background-color: white;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  padding:10px; 
+}
 
 header > form {
   max-width: 1280px;
@@ -307,3 +313,34 @@ header > form {
 	margin-bottom: 0;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+
+  
+  /* background: rgb(51, 150, 153); */
+
+  color: white;
+  font-family: Helvetica;
+  font-weight: 300;
+}
+
+/* .navbar-header{
+  background:linear-gradient(
+      rgba(69, 152, 220, 0.60),
+      rgba(79, 128, 207, 0.7)
+    ),  url("https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?w=940&h=650&auto=compress");
+background-size: cover;
+} */
+
+.navbar__title {
+  margin-right: auto;
+  font-size: 150%;
+  padding: 12px 16px;
+}
+
+.navbar__item {
+  padding: 16px 16px;
+  cursor: pointer;
+  vertical-align: middle;
+}

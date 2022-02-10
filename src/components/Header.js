@@ -16,6 +16,7 @@ const resetGame = () => {
 	return (
 		<header>
 			<form onSubmit={handleSubmit}>
+                <div className="form-container">
 				<div className='form-group'>
 					<label htmlFor='category'>Category</label>
 					{loadingCategories ? (
@@ -111,6 +112,7 @@ const resetGame = () => {
 						Reset Game
 					</button>
 				</div>
+                </div>
 			</form>
 		</header>
 	)
